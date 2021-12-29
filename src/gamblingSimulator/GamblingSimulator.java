@@ -1,15 +1,28 @@
 /**
  * @author Vinit Kumar
  * @date 29/12/2021
- * Divide Rs N into 1,2,5,10,50,100,500,1000 Rs such that minimum no of notes returned
+ * Gambling Problem
  */
 package gamblingSimulator;
+import java.util.Random;
 
 public class GamblingSimulator {
-    //added variable for stake and bet
-    public static int STAKE=100;
+    //instance variable declaration
+    public static final int STAKE=100;
     public static final int BET=1;
+    public static Random random=new Random();
+    //method to generate Wins or Looses
+    public static void betGambling(){
+        int value=random.nextInt(2);
+        if(value==0){
+            System.out.println("Loose !!");
+        }
+        else{
+            System.out.println("Win !!");
+        }
+    }
     public static void main(String[] args){
-        System.out.println("Welcome to Gambling Simulator:");
+        System.out.println("Welcome to Gambling Simulator:");// Welcome Message
+        betGambling();// Place a bid
     }
 }
